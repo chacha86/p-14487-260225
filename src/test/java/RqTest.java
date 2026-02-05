@@ -33,4 +33,13 @@ public class RqTest {
         String rst = rq.getParam("keyword");
         assertThat(rst).isEqualTo("자바");
     }
+
+    @Test
+    @DisplayName(value = "명령: 목록?keywordType=title 일때, rq.getParam(\"kewyordType\") -> \"title\"")
+    void t4() {
+
+        Rq rq = new Rq("목록?keywordType=title");
+        String rst = rq.getParam("keywordType");
+        assertThat(rst).isEqualTo("title");
+    }
 }
