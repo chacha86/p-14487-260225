@@ -16,7 +16,13 @@ public class Rq {
         String params = cmd.split("\\?")[1];
 
         for (String param : params.split("&")) {
+
+            String[] paramBits = param.split("=");
             String paramKey = param.split("=")[0];
+
+            if(paramBits.length == 1) {
+                continue;
+            }
             String paramValue = param.split("=")[1];
 
             if (paramKey.equals(key)) {
