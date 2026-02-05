@@ -56,7 +56,7 @@ public class RqTest {
     @DisplayName(value = "명령: 목록?page=1 일때, rq.getParamAsInt(\"page\") -> 1")
     void t6() {
         Rq rq = new Rq("목록?page=1");
-        int rst = rq.getParamAsInt("page");
+        int rst = rq.getParamAsInt("page", -1);
         assertThat(rst).isEqualTo(1);
     }
 
@@ -64,7 +64,7 @@ public class RqTest {
     @DisplayName(value = "명령: 목록?page=10 일때, rq.getParamAsInt(\"page\") -> 10")
     void t7() {
         Rq rq = new Rq("목록?page=10");
-        int rst = rq.getParamAsInt("page");
+        int rst = rq.getParamAsInt("page", -1);
         assertThat(rst).isEqualTo(10);
     }
 
