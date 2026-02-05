@@ -61,7 +61,7 @@ public class RqTest {
     }
 
     @Test
-    @DisplayName(value = "명령: 목록?page=10 일때, rq.getParamAsInt(\"page\") -> 10")
+    @DisplayName(value = "명령: 목록?page9 =10 일때, rq.getParamAsInt(\"page\") -> 10")
     void t7() {
         Rq rq = new Rq("목록?page=10");
         int rst = rq.getParamAsInt("page", -1);
