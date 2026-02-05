@@ -7,7 +7,7 @@ public class AppTest {
 
 
     @Test
-    @DisplayName("1 + 2 = 3")
+    @DisplayName(value = "1 + 2 = 3")
     void t1() {
         App app = new App();
         int rst = app.plus(1, 2);
