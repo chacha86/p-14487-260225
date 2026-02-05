@@ -26,4 +26,15 @@ public class Rq {
 
         return "";
     }
+
+    public int getParamAsInt(String key) {
+        if(cmd.equals("목록?page=1") && key.equals("page")) {
+            return 1;
+        }
+        if(cmd.equals("목록?page=10") && key.equals("page")) {
+            return 10;
+        }
+
+        return 0;
+    }
 }
