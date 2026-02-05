@@ -76,4 +76,14 @@ public class RqTest {
         String rst = rq.getParam("keywordType");
         assertThat(rst).isEqualTo("title");
     }
+
+    @Test
+    @DisplayName(value = "명령: 삭제?id=aaa 일때, rq.getParamAsInt(\"id\", -1) -> -1")
+    void t9() {
+
+        Rq rq = new Rq("삭제?id=aaa");
+        int rst = rq.getParamAsInt("id", -1);
+        assertThat(rst).isEqualTo(-1);
+
+    }
 }
