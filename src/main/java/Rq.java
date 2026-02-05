@@ -15,11 +15,11 @@ public class Rq {
 
         String params = cmd.split("\\?")[1];
 
-        for(String param : params.split("&")) {
+        for (String param : params.split("&")) {
             String paramKey = param.split("=")[0];
             String paramValue = param.split("=")[1];
 
-            if(paramKey.equals(key)) {
+            if (paramKey.equals(key)) {
                 return paramValue;
             }
         }
@@ -29,7 +29,6 @@ public class Rq {
 
     public int getParamAsInt(String key) {
         String rst = getParam(key);
-
         return Integer.parseInt(rst);
     }
 }
